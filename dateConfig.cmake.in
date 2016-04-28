@@ -1,0 +1,9 @@
+# - Config file for the robochunk package
+# It defines the following variables
+# easyloggingpp_INCLUDE_DIRS - include directories for the robochunk libraries
+
+# Compute Paths
+get_filename_component(DATE_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(date_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+message(STATUS "Found Cdate")
+message(STATUS "   Includes: ${date_INCLUDE_DIRS}")
