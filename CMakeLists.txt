@@ -12,7 +12,7 @@ ExternalProject_Add(${EP_NAME}
   # prefix for the external project in the build folder
   PREFIX external
   # the source
-  URL https://github.com/HowardHinnant/date/archive/v2.0.0.zip
+  URL https://github.com/HowardHinnant/date/archive/95271f8337c494c0b5e7200a83a8ef1622959390.zip
   # Install to devel
   INSTALL_DIR ${CATKIN_DEVEL_PREFIX}/date
   # don't update, we lock the version
