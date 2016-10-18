@@ -36,4 +36,4 @@ catkin_package(
 
 # install the include directory from 
 install(DIRECTORY ${INSTALL_DIR}/include/
-        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
+        DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION})
