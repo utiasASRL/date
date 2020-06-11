@@ -12,7 +12,8 @@ ExternalProject_Add(${EP_NAME}
   # prefix for the external project in the build folder
   PREFIX external
   # the source
-  URL https://github.com/HowardHinnant/date/archive/95271f8337c494c0b5e7200a83a8ef1622959390.zip
+  GIT_REPOSITORY https://github.com/HowardHinnant/date.git
+  GIT_TAG v3.0.0
   # Install to devel
   INSTALL_DIR ${CATKIN_DEVEL_PREFIX}/date
   # don't update, we lock the version
@@ -22,7 +23,7 @@ ExternalProject_Add(${EP_NAME}
   # don't build, it's header only
   BUILD_COMMAND ""
   # catkin doesn't want autogen includes in build, it wants them in devel
-  INSTALL_COMMAND rsync -rm --include=*.h --exclude=* <SOURCE_DIR>/ <INSTALL_DIR>/include
+  INSTALL_COMMAND rsync -rm --include=*.h <SOURCE_DIR>/include/date/ <INSTALL_DIR>/include
 )
 
 
@@ -34,6 +35,6 @@ catkin_package(
   INCLUDE_DIRS ${INSTALL_DIR}/include
 )
 
-# install the include directory from 
+# install the include directory from
 install(DIRECTORY ${INSTALL_DIR}/include/
         DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION})
